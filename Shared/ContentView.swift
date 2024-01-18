@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @State //Para que se actualize la interfaz
     var nombre = "Pau"
+    @State
+    var foto = "foto1"
     var body: some View {
         VStack {
             VStack {
@@ -20,7 +22,8 @@ struct ContentView: View {
                         .padding()
                     
                     Button(action: {
-                        nombre = "Quesadilla"
+                        nombre = "Supra-MK5"
+                        foto = "Supra-MK5"
                     }) {
                         Text("Pulsame")
                             .foregroundColor(.blue)
@@ -28,7 +31,7 @@ struct ContentView: View {
                             )
                     }
                     
-                    Image("Supra-MK5").resizable().aspectRatio(contentMode: .fit)
+                    Image(foto).resizable().aspectRatio(contentMode: .fit)
                 }
             }
         }
